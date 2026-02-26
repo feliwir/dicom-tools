@@ -1,8 +1,8 @@
-import type { ComponentType } from 'react'
+import type { ComponentType } from "react";
 
 export type ToolDefinition = {
-  id: string
-  title: string
-  description: string
-  component: ComponentType
-}
+  id: string;
+  title: string;
+  description: string;
+  component: ComponentType;
+};

@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build:wasm": "wasm-pack build rust/dicom_json_wasm --target web --out-dir ../../src/wasm/pkg --out-name dicom_json_wasm --release",
+    "build:wasm:validator": "wasm-pack build rust/dicom_json_wasm --target web --out-dir ../../src/wasm/pkg --out-name dicom_json_wasm --release",
+    "build:wasm:dump": "wasm-pack build rust/dicom_dump_wasm --target web --out-dir ../../src/wasm/dump --out-name dicom_dump_wasm --release",
+    "build:wasm": "npm run build:wasm:validator && npm run build:wasm:dump",
     "dev": "npm run build:wasm && vite",
     "build": "npm run build:wasm && tsc -b && vite build",
     "lint": "eslint .",
